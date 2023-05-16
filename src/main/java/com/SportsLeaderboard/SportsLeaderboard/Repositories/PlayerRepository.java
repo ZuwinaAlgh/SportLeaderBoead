@@ -1,0 +1,26 @@
+package com.SportsLeaderboard.SportsLeaderboard.Repositories;
+
+import com.SportsLeaderboard.SportsLeaderboard.Models.Player;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface PlayerRepository extends JpaRepository<Player, Integer> {
+
+    @Query(value = "SELECT s.id FROM Player s WHERE s.userName= :userName")                //get player by name
+    Integer getPlayerByName(@Param("userName") String userName);
+
+    @Query(value = "SELECT s FROM Player s WHERE s.password= :password")
+    Player getPlayerID(@Param("password") String password);
+
+    @Query(value = "SELECT s FROM Player")
+    List<Player> getAllPlayer();
+
+
+}
+
+
