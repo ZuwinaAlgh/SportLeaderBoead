@@ -23,7 +23,7 @@ import java.util.Map;
 @Service
 public class ReportService{
 
-    public static final String pathToReports = "C:\\Users\\user008\\Downloads\\Reports";
+    public static final String pathToReports = "C:\\Users\\user011\\Downloads\\reports";
     @Autowired
     private PlayerRepository playerRepository;
     @Autowired
@@ -49,7 +49,7 @@ public class ReportService{
 
         }
 
-        File file = new File("C:\\Users\\user008\\IdeaProjects\\SportsLeaderboard\\src\\main\\resources\\LeaderBoardReport.jrxml");
+        File file = new File("C:\\Users\\user011\\Desktop\\SportsLeaderBoard\\SportLeaderBoead\\src\\main\\resources\\LeaderBoardReport.jrxml");
         JasperReport jasperReport = JasperCompileManager.compileReport(file.getAbsolutePath());
         JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(leaderBoardReports);
         Map<String, Object> paramters = new HashMap<>();

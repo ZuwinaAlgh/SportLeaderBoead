@@ -17,7 +17,7 @@ public interface PlayerRepository extends JpaRepository<Player, Integer> {
     @Query(value = "SELECT s FROM Player s WHERE s.password= :password")
     Player getPlayerID(@Param("password") String password);
 
-    @Query(value = "SELECT s FROM Player")
+    @Query(value = "SELECT s FROM Player s")
     List<Player> getAllPlayer();
 
 

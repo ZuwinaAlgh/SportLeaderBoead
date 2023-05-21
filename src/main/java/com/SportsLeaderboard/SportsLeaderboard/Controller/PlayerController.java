@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.text.ParseException;
+import java.util.List;
 
 @RestController
 @RequestMapping(value = "player")
@@ -36,8 +37,9 @@ public class PlayerController {
     }
 
     @RequestMapping(value = "GetAllPlayer")
-    public void generateAllPlayer(){
-        playerService.getAllPlayers();
+    public List<Player> generateAllPlayer(){
+        List<Player> playerList=playerService.getAllPlayers();
+        return playerList;
     }
 
 

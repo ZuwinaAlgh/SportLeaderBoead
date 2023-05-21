@@ -21,7 +21,7 @@ public interface StandingRepository extends JpaRepository<Standings, Integer> {
     Standings getStandingID(@Param("id") Integer id);
 
 
-    @Query(value = "SELECT s FROM Standings")
+    @Query(value = "SELECT s FROM Standings s")
     List<Standings> getAllStandings();
 
 }
