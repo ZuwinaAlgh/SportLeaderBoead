@@ -33,6 +33,10 @@ public class LeaderBoardService{
         leaderBoard.setStandings(standings1);
         leaderBoardRepository.save(leaderBoard);
 
+    }
 
+    public List<LeaderBoard> getAllLeaderBoard(){
+
+        return leaderBoardRepository.getAllLeaderBoard();
     }
 }

@@ -22,8 +22,8 @@ public class StandingService {
 
     public void addStandings(String userName){
         Standings standings=new Standings();
-        standings.setWin(10);
-        standings.setLoss(2);
+        standings.setWin(84);
+        standings.setLoss(6);
         Integer player=playerRepository.getPlayerByName(userName);
         Player player1=playerRepository.findById(player).get();
         standings.setPlayer(player1);

@@ -19,13 +19,13 @@ public class PlayerService {
 
     public void RegisterPlayer(){
         Player player=new Player();
-        player.setUserName("Mohammed");
-        player.setPassword("Moh159");
-        player.setTeamName("Crash Logic");
-        player.setSport("golf");
+        player.setUserName("Zuiwna");
+        player.setPassword("Zu951");
+        player.setTeamName("Office Heroes");
+        player.setSport("Basketball");
         player.setCreateDate(new Date());
         player.setUpdateDate(new Date());
-        player.setIsActive(Boolean.FALSE);
+        player.setIsActive(Boolean.TRUE);
     playerRepository.save(player);
     }
 
@@ -58,8 +58,6 @@ public class PlayerService {
         player.setUpdateDate(new Date());
         player.setIsActive(Boolean.TRUE);
         playerRepository.save(player);
-
-
 
     }
 

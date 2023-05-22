@@ -18,7 +18,7 @@ public class GameService {
 
     public void addGame(String userName){
         Game game=new Game();
-        game.setScore(8);
+        game.setScore(52);
         Integer player=playerRepository.getPlayerByName(userName);
         Player player1=playerRepository.findById(player).get();
         game.setPlayer(player1);

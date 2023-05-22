@@ -22,8 +22,6 @@ public interface PlayerRepository extends JpaRepository<Player, Integer> {
 
     @Query(value = "SELECT m FROM Player m where m.id= :id")
     Player getPlayerId(@Param("id") Integer id);
-
-
 }
 
 
