@@ -27,6 +27,7 @@ public class PlayerController {
 
     @RequestMapping(value = "deletePlayerById",method = RequestMethod.GET)             //delete Player
     public void deletePlayerById(@RequestParam String password) {
+
         playerService.deleteSchoolById(password);
     }
 
@@ -40,6 +41,13 @@ public class PlayerController {
     public List<Player> generateAllPlayer(){
         List<Player> playerList=playerService.getAllPlayers();
         return playerList;
+    }
+
+    @RequestMapping(value = "GetPlayerById" ,method = RequestMethod.GET)
+    public Player GetPlayerById(@RequestParam Integer id){
+      Player player1=playerService.getPlayerById(id);
+      return player1;
+
     }
 
 

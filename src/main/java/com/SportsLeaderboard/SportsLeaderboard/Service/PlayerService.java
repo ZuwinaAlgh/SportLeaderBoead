@@ -19,13 +19,13 @@ public class PlayerService {
 
     public void RegisterPlayer(){
         Player player=new Player();
-        player.setUserName("Islam");
-        player.setPassword("Isalm21");
-        player.setTeamName("All for one");
-        player.setSport("football");
+        player.setUserName("Mohammed");
+        player.setPassword("Moh159");
+        player.setTeamName("Crash Logic");
+        player.setSport("golf");
         player.setCreateDate(new Date());
         player.setUpdateDate(new Date());
-        player.setIsActive(Boolean.TRUE);
+        player.setIsActive(Boolean.FALSE);
     playerRepository.save(player);
     }
 
@@ -60,6 +60,13 @@ public class PlayerService {
         playerRepository.save(player);
 
 
+
+    }
+
+
+    public Player getPlayerById(Integer id){                         //get player by id
+      Player player=playerRepository.getPlayerId(id);
+      return player;
 
     }
 }
